@@ -1,0 +1,23 @@
+{
+  "name": "ip-blacklist-redis-seed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peterjgrainger/ip-blacklist-redis-seed.git"
+  },
+  "author": "Peter Grainger (peter@grainger.xyz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterjgrainger/ip-blacklist-redis-seed/issues"
+  },
+  "homepage": "https://github.com/peterjgrainger/ip-blacklist-redis-seed#readme",
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
