@@ -24,9 +24,9 @@ client.on('connect', function() {
 
 // lookup the latest commit hash
 client.get('commitHash', (error, result) => {
-    // TODO: use github api to lookup the latest commit hash in firehol repo
+    // TODO: use github api to lookup the latest commit hash in https://github.com/firehol/blocklist-ipsets
 
-    // TODO use github api to get all of the IP addresses in firehol repo
+    // TODO use github api to get all of the IP addresses in https://github.com/firehol/blocklist-ipsets
     
     
     if(githubCommitHash !== result) {
@@ -38,7 +38,7 @@ client.get('commitHash', (error, result) => {
               // if they aren't the same replace the list in redis with these ones.
               ipList.forEach(value => {
                 client.set(value.ipAddress, value.context, function(err, reply) {
-                  if(reply === 'OK') console.log(value + ' address added')
+                  if(reply === 'OK') console.log(value.ipAddress + ' address added')
                 })
               })
 
